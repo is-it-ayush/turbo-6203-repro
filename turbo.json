@@ -4,12 +4,40 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
-    "lint": {},
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "fmt": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/prettiercache"],
+      "outputMode": "errors-only"
+    },
+    "fmt:fix": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/prettiercache"],
+      "outputMode": "errors-only"
+    },
+    "lnt": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/.eslintcache"],
+      "outputMode": "errors-only"
+    },
+    "lnt:fix": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/.eslintcache"],
+      "outputMode": "errors-only"
+    },
+    "typecheck": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/tsbuildinfo.json"],
+      "outputMode": "errors-only"
+    },
     "dev": {
-      "cache": false,
-      "persistent": true
+      "dependsOn": [""],
+      "persistent": true,
+      "cache": false
     }
   }
 }

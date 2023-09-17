@@ -1,0 +1,17 @@
+{
+  "name": "@repo/lint",
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "commonjs",
+  "private": true,
+  "devDependencies": {
+    "@next/eslint-plugin-next": "canary",
+    "@vercel/style-guide": "^5.0.0",
+    "eslint-config-turbo": "^1.10.12",
+    "eslint": "8.48.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@types/node": "20.6.2",
+    "@repo/tsconfig": "0.0.0"
+  }
+}

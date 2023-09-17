@@ -1,3 +1,7 @@
 module.exports = {
-  extends: ["custom/react-internal"],
+  extends: [require.resolve("@repo/lint/library")],
+  parserOptions: {
+    project: `${__dirname}/tsconfig.json`,
+  },
+  root: true,
 };
