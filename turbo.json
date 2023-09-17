@@ -35,7 +35,7 @@
       "outputMode": "errors-only"
     },
     "dev": {
-      "dependsOn": [""],
+      "dependsOn": ["^topo"],
       "persistent": true,
       "cache": false
     }

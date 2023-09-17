@@ -1,4 +1,4 @@
-const Card = () => {
+export const Card = () => {
   return <div></div>;
 };
 
