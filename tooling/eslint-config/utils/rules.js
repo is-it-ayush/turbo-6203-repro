@@ -1,3 +1,4 @@
+// thanks to typehero (typehero.dev) for the rules. : )
 module.exports = {
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',

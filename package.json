@@ -22,5 +22,5 @@
       "@repo/ui": "link:./packages/ui"
     }
   },
-  "name": "pnpm-cache-turborepo"
+  "name": "monorepo-that-works"
 }
