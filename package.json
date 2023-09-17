@@ -3,10 +3,10 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo lnt",
-    "lint:fix": "turbo lnt:fix",
-    "format": "turbo fmt",
-    "format:fix": "turbo fmt:fix",
+    "lint": "turbo lint --continue",
+    "lint:fix": "turbo lint:fix --continue",
+    "format": "turbo format",
+    "format:fix": "turbo format:fix",
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {

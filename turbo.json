@@ -9,22 +9,22 @@
     "topo": {
       "dependsOn": ["^topo"]
     },
-    "fmt": {
+    "format": {
       "dependsOn": ["^topo"],
       "outputs": ["node_modules/.cache/prettiercache"],
       "outputMode": "errors-only"
     },
-    "fmt:fix": {
+    "format:fix": {
       "dependsOn": ["^topo"],
       "outputs": ["node_modules/.cache/prettiercache"],
       "outputMode": "errors-only"
     },
-    "lnt": {
+    "lint": {
       "dependsOn": ["^topo"],
       "outputs": ["node_modules/.cache/.eslintcache"],
       "outputMode": "errors-only"
     },
-    "lnt:fix": {
+    "lint:fix": {
       "dependsOn": ["^topo"],
       "outputs": ["node_modules/.cache/.eslintcache"],
       "outputMode": "errors-only"
