@@ -1,11 +1,12 @@
-import { executeMeJIT } from "@repo/just-in-time";
-import { executeMeCompiled } from "@repo/compiled";
+import { type ExportMe } from "@repo/transpiled";
 import Link from "next/link";
 
-
 export default function Page(): JSX.Element {
-  executeMeJIT();
-  executeMeCompiled(); // pre-generated bindings provided by @repo/compiled.
+  const instance: ExportMe = {
+    a: 1,
+    b: 2,
+    c: "isitayush",
+  };
   return (
     <main>
       <span>
@@ -16,8 +17,9 @@ export default function Page(): JSX.Element {
         >
           this discussion
         </Link>{" "}
-        out.
+        out. Below is a instance created from the bindings from @repo/compiled.
       </span>
+      <code>{JSON.stringify(instance, null, 2)}</code>
     </main>
   );
 }

@@ -1,0 +1,8 @@
+{
+  "extends": ["//"],
+  "pipeline": {
+    "bindings": {
+      "cache": false
+    }
+  }
+}

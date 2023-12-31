@@ -17,8 +17,7 @@
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@repo/just-in-time": "0.0.0",
-    "@repo/compiled": "0.0.0"
+    "@repo/transpiled": "0.0.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",
