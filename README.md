@@ -1,6 +1,9 @@
 #### turb discussion #6203 repro
 
-Hi Anthony! The repo follows the structure,
+- [discussion](https://github.com/vercel/turbo/discussions/6203)
+
+Hi @anthonyshew! I hacked together a quick repo that emulates a somewhat similar
+scenario. The repo follows the following structure,
 
 ```
 .
