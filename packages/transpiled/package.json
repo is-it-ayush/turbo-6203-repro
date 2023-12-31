@@ -14,7 +14,7 @@
     }
   },
   "scripts": {
-    "build": "cargo build",
+    "build": "[ \"$(uname)\" != \"Windows_NT\" ] && exit 0; cargo build",
     "bindings": "cross test --target x86_64-pc-windows-gnu && sh ./bindings.sh",
     "format": "prettier . --check --cache --cache-location=\"node_modules/.cache/prettiercache\"",
     "format:fix": "prettier . --write --cache --cache-location=\"node_modules/.cache/prettiercache\" --log-level=warn",

@@ -5,6 +5,7 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+      "cache": false
     },
     "topo": {
       "dependsOn": ["^topo"]
