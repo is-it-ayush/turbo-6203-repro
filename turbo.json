@@ -38,6 +38,11 @@
       "dependsOn": ["^topo"],
       "persistent": true,
       "cache": false
+    },
+    "clean": {
+      "dependsOn": ["^topo"],
+      "persistent": true,
+      "cache": false
     }
   }
 }

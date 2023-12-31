@@ -7,11 +7,12 @@
     "lint:fix": "turbo lint:fix --continue",
     "format": "turbo format",
     "format:fix": "turbo format:fix",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean && rm -rf node_modules .turbo"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10",

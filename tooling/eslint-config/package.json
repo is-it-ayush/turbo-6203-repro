@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "commonjs",
   "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules"
+  },
   "devDependencies": {
     "@next/eslint-plugin-next": "canary",
     "@vercel/style-guide": "^5.0.0",

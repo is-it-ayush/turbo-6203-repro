@@ -1,22 +1,21 @@
-a simple battries included turborepo starter.
+#### turb discussion #6203 repro
 
-you get eslint, prettier and a ui package out of the box. everything is cached
-and the pipeline is already setup. you can configure it as you want. checkout
-[package.json](./package.json) for commands. you also get nextjs (./apps/web)
-but yeah you can replace it with vite or anything else you like tbh. although,
-if you do so, make sure to change the eslint config too cause it includes the
-"next" ruleset.
+Hi Anthony! The repo follows the structure,
 
-#### why.
+```
+.
+├── ./apps/
+│   └── ./web (@repo/web): A nextjs website.
+├── ./packages/
+│   ├── ./just-in-time (@repo/just-in-time): A transpiled package.
+│   └── ./compiled (@repo/compiled): A compiled package.
+└── ./tooling/
+    ├── ./eslint-config (@repo/lint): Reuseable Eslint Configurations.
+    └── ./tsconfig (@repo/tsconfig): Reuseable Typescript Configurations.
+```
 
-it's mostly for me tbh, i forget things and having a place i could just yoink the
-code from and start a new proejct seemed like a nice idea.
-
-#### people who helped.
-
-me, i did it. thank me.
-
-#### license.
-
-MIT btw. it's [here](./LICENSE.md).
-
+Let's say my package `@repo/compiled` generates some JS bindings after being compiled on a
+specific platform (suppose `windows-latest`) such that the bindings in `/dist` are already
+present before the compilation of my web application (`@repo/web`) takes place
+(suppose `ubuntu-latest`) via a different workflow. All I want my nextjs application (`@repo/web`)
+to do is bundle those bindings at build time.
